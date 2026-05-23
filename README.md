@@ -4,7 +4,7 @@ Crash reporting and analytics for Flutter apps.
 Wraps the native iOS and Android GatiFlow SDKs via platform channels.
 
 [![pub.dev](https://img.shields.io/pub/v/gatiflow_flutter)](https://pub.dev/packages/gatiflow_flutter)
-![iOS 16+](https://img.shields.io/badge/iOS-16%2B-blue)
+![iOS 13+](https://img.shields.io/badge/iOS-13%2B-blue)
 ![Android minSdk 21](https://img.shields.io/badge/Android-minSdk%2021-brightgreen)
 
 ---
