@@ -1,0 +1,46 @@
+buildscript {
+    ext.kotlin_version = "1.9.23"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.3.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    compileSdkVersion 34
+    namespace "dev.gatiflow.flutter"
+
+    defaultConfig {
+        minSdkVersion 21
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+repositories {
+    google()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // Flutter engine (provided by the host app)
+    implementation "io.flutter:flutter_embedding_debug:+"
+
+    // GatiFlow native Android SDK
+    implementation "com.github.dmsyudha:gatiflow-android:v1.0.0"
+}

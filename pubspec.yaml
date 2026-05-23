@@ -1,0 +1,28 @@
+name: gatiflow_flutter
+description: Crash reporting and analytics SDK for Flutter.
+version: 1.0.0
+homepage: https://github.com/dmsyudha/gatiflow-flutter
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        kotlin: true
+        package: dev.gatiflow.flutter
+        pluginClass: GatiFlowPlugin
+      ios:
+        swift: true
+        pluginClass: GatiFlowPlugin
